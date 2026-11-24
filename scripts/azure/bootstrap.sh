@@ -12,7 +12,7 @@ upload() {  # $1 = blob name, $2 = file
 status() { echo "$(date -u +%FT%TZ) $*" > /opt/status.txt; upload status.txt /opt/status.txt; }
 status "booted"
 nvidia-smi || { status "FAILED: no nvidia driver"; exit 1; }
-cd /opt && git clone -b "$BRANCH" https://github.com/shivankur-code/carbon-aware-scheduling.git calf
+cd /opt && git clone -b "$BRANCH" https://github.com/shivankur-code/reliable-green-inference.git calf
 cd /opt/calf
 curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH="$HOME/.local/bin:$PATH"
 uv venv -p 3.12 .venv && . .venv/bin/activate

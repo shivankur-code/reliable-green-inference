@@ -10,7 +10,7 @@
 
 ## Run
 ```bash
-git clone <this repo> && cd carbon-aware-scheduling
+git clone https://github.com/shivankur-code/reliable-green-inference && cd reliable-green-inference
 bash scripts/setup_gpu_node.sh && source .venv/bin/activate
 python -m gpu_bench.run_sweep configs/gpu/g0_smoke.yaml --quick   # 10 min sanity check
 python -m gpu_bench.run_sweep configs/gpu/g3_reliability.yaml     # about 30 min
